@@ -8,7 +8,7 @@
 
 # # 테스트 케이스 갯수 입력
 # test_case = int(input())
-# # for문을 통해 2차원 배열 입력 / 행갯수 : test_case / 열갯수 : 제한없음, 입력값은 띄어쓰기로 구분
+# # for문을 통해 list로 입력 받기
 # num = [list(map(int, input().split())) for _ in range(test_case)]
 
 # # 2중 for문을 통해 odd_sum에 홀수값만 더하고 출력
@@ -30,7 +30,7 @@
 
 # # 테스트 케이스 갯수 입력
 # test_case = int(input())
-# # for문을 통해 2차원 배열 입력 / 행갯수 : test_case / 열갯수 : 제한없음
+# # for문을 통해 list로 입력 받기
 # yyyymmdd = [list(map(int, input())) for _ in range(test_case)]
 # # for문을 통해 day에 입력된 날짜의 유효성 판단 후 형식 변환 후 출력
 # for i in range(test_case):
@@ -58,10 +58,62 @@
 
 # # 테스트 케이스 갯수 입력
 # test_case = int(input())
-# # for문을 통해 2차원 배열 입력 / 행갯수 : test_case / 열갯수 : 제한없음
+# # for문을 통해 list로 입력 받기
 # num = [list(map(int, input().split())) for _ in range(test_case)]
 
 # # for문을 통해 평균값 출력
 # for i in range(test_case):
 #     mean = int(round(sum(num[i]) / 10, 0))
 #     print('#{} {}'.format(i + 1, mean))
+
+# # 번호: 1945
+# # 링크: https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5Pl0Q6ANQDFAUq
+# # 문제:
+# '''
+# 숫자 N은 아래와 같다.
+# N=2a x 3b x 5c x 7d x 11e
+# N이 주어질 때 a, b, c, d, e 를 출력하라.
+# '''
+# # 테스트 케이스 갯수 입력
+# test_case = int(input())
+# # for문을 통해 list로 입력 받기
+# num = [int(input()) for _ in range(test_case)]
+
+# for i in range(test_case):
+#   a = b = c = d = e = 0
+#   while num[i] % 2 ==0:
+#       num[i] = num[i] // 2
+#       a += 1
+#   while num[i] % 3 ==0:
+#       num[i] = num[i] // 3
+#       b += 1
+#   while num[i] % 5 ==0:
+#       num[i] = num[i] // 5
+#       c += 1
+#   while num[i] % 7 ==0:
+#       num[i] = num[i] // 7
+#       d += 1
+#   while num[i] % 11 ==0:
+#       num[i] = num[i] // 11
+#       e += 1
+#   print('#{} {} {} {} {} {}'.format(i + 1, a, b, c, d, e))
+
+# 번호: 1986
+# 링크: https://swexpertacademy.com/main/code/problem/problemDetail.do?contestProbId=AV5PxmBqAe8DFAUq
+# 문제: 1부터 N까지의 숫자에서 홀수는 더하고 짝수는 뺐을 때 최종 누적된 값을 구해보자.
+
+# 테스트 케이스 갯수 입력
+# test_case = int(input())
+# # for문을 통해 list로 입력 받기
+# num = [int(input()) for _ in range(test_case)]
+
+# for i in range(test_case):
+#     sum = 0
+#     for j in range(1, num[i]+1):
+#         if j % 2 == 0:
+#             sum -= j
+#         else:
+#             sum += j
+#     print('#{} {}'.format(i+1, sum))
+
+
